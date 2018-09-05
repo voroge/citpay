@@ -7,7 +7,6 @@ from PyQt4.QtCore import SIGNAL
 from PyQt4.QtGui import QApplication, QMainWindow
 
 import pandas as pd
-from PyQt5.QtWidgets import QHeaderView
 
 import citpay
 from citpayui import Ui_MainWindow
