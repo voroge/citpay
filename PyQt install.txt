@@ -1,0 +1,16 @@
+В состав PyQT5 не входит QT Designer. Поэтому установил PyQT4 из бинарника whl с сайта. 
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4
+Также перед установкой надо установить SIP. 
+
+Запускать PIP надо в папке с той виртуальной средой в которой планируется использовать.
+
+C:\Python\ENV\citpay_py37_env\Scripts\pip3.exe install PyQt4-4.11.4-cp37-cp37m-win_amd64.whl
+
+Конвертация из ui в py работает только из под pycharm terminal
+Возможно потому, что установка в виртуальное окружение
+
+(citpay_py37_env) C:\Grunge\ITC_FAS\Python\citpay>cd c:\Python\ENV\citpay_py37_env\Lib\site-packages\PyQt4\
+
+(citpay_py37_env) c:\Python\ENV\citpay_py37_env\Lib\site-packages\PyQt4>pyuic4.bat citpayui.ui -o citpayui.py
+
+А лучше так c:\Python\ENV\citpay_py37_env\Lib\site-packages\PyQt4\pyuic4.bat citpayui.ui -o citpayui.py

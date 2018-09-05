@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>816</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Verdana</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Дисциплина предоставления платы граждан за КУ</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Z:/Python/citpay/ico/user32.png</normaloff>Z:/Python/citpay/ico/user32.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Verdana</family>
+       </font>
+      </property>
+      <property name="title">
+       <string>Отчетный период</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>147</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="text">
+            <string>Месяц :</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cbmonth">
+           <property name="currentIndex">
+            <number>6</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>январь</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>февраль</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>март</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>апрель</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>май</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>июнь</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>июль</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>август</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>сентябрь</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>октябрь</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>ноябрь</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>декабрь</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Год :</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cbyear">
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>2016</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2017</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2018</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2019</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2020</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnstart">
+      <property name="text">
+       <string>Сформировать отчет</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableView" name="tvdata"/>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1117</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
