@@ -274,11 +274,11 @@ class Tcitpay(object):
                                       'format': self.getfmt(workbook, 'cf_green')})
         worksheet.conditional_format('A12:H' + str(len(adf.index) + 11),
                                      {'type': 'formula',
-                                      'criteria': '=AND($H12<100,$H12>0)',
+                                      'criteria': '=AND($H12<100,$H12>0,$G12>0)',
                                       'format': self.getfmt(workbook, 'cf_orange')})
         worksheet.conditional_format('A12:H' + str(len(adf.index) + 11),
                                      {'type': 'formula',
-                                      'criteria': '=$H12=0',
+                                      'criteria': '=$G12=0',
                                       'format': self.getfmt(workbook, 'cf_red')})
 
         worksheet.merge_range('B' + str(len(adf.index)+14) + ':F' + str(len(adf.index)+14),

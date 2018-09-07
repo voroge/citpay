@@ -138,7 +138,7 @@ gmainsql = """
                    when
                      consts.report_date-nvl(ot.adate,sysdate)>=0 then 0
                    when 
-                     consts.report_date-nvl(ot.adate,sysdate)>-2 then (consts.report_date-nvl(ot.adate,sysdate))/(consts.report_date-sysdate)*0.1  
+                     consts.report_date-nvl(ot.adate,sysdate)>-1 then (consts.report_date-nvl(ot.adate,sysdate))/(consts.report_date-sysdate)*0.1  
                    else
                      (consts.report_date-nvl(ot.adate,sysdate))/(consts.report_date-sysdate)*0.4      
                    end  as rate_expired 

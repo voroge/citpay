@@ -1,0 +1,15 @@
+У pyinstaller есть проблемы:
+
+1. Он плохо работает под Win10 (Выдает предупреждения, что не находит кучу файлов). С другой стороны,
+не смотря на это дистрибутив собирает и все работает.
+2. Он не совместим с Python 3.7 (Я использовал Python 3.6.6)
+3. Некоторых модулей Pandas он не видит. Их надо подключать через опцию --hidden-import
+4. Pyinstaller не собирает в exe иконку основного окна приложения. Чтобы она корректно отображалась необходимо
+в файле citpayui.py, созданом в qtdesigner в строчке
+icon.addPixmap(QtGui.QPixmap(_fromUtf8("user32.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+указать имя файла иконки без путей, а файл иконки положить в основную папку проекта с файлом citpayui.py,
+а после сборки дистрибутива файл с иконкой положить в папку с exe файлом.
+5. Если сборка идет с 32-разрядной IDE, то с 64 разрядным Oracle Client работать не будет. И наоборот, версия
+собранная с 64-разрядной IDE вообще не запустится под 32-разрядной виндой.
+
+pyinstaller --onefile --icon=ico\user32.ico --noconsole --hidden-import pandas._libs.tslibs.np_datetime --hidden-import pandas._libs.tslibs.nattype --hidden-import pandas._libs.skiplist uiconnect.py
