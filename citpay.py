@@ -153,10 +153,12 @@ class Tcitpay(object):
         return ldf
 
     def getmonthrange(self, amonth):
-        if amonth <7:
-            startmonth = 1
-        else:
-            startmonth = 7
+        # Работающий кусок кода, для формирования рейтинга по полугодиям
+        # if amonth <7:
+        #     startmonth = 1
+        # else:
+        #     startmonth = 7
+        startmonth = 1
         llist = []
         for x in range(startmonth, amonth + 1):
             if x<10:
