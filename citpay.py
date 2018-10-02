@@ -62,7 +62,7 @@ class Event:
 class Tcitpay(object):
 
     def __init__(self):
-        self.gdebug = True
+        self.gdebug = False
         self.logcount = 0
         self.step = 10
         self.onlog = Event()
@@ -70,8 +70,14 @@ class Tcitpay(object):
     def log(self, amessage):
         if self.gdebug:
             print(amessage + ": " + time.asctime(time.localtime(time.time())))
-            self.logcount += self.step
-            self.onlog(self.logcount)
+        else:
+            try:
+                f = open('citpay.log', 'a')
+                f.write(amessage + ": " + time.asctime(time.localtime(time.time())) + '\n')
+            finally:
+                f.close()
+        self.logcount += self.step
+        self.onlog(self.logcount)
 
     def dprint(self, aobject):
         if self.gdebug:
